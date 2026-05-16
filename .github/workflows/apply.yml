@@ -12,8 +12,8 @@ jobs:
 
       - name: Run submission script
         env:
-          APPLICANT_NAME: "Your Name"
-          APPLICANT_EMAIL: "you@example.com"
-          RESUME_LINK: "https://linkedin.com/in/yourprofile"
+          APPLICANT_NAME: "Fredrick Karuri"
+          APPLICANT_EMAIL: "fredrickkmaish@gmail.com"
+          RESUME_LINK: "https://linkedin.com/in/fredrick-karuri"
           SIGNING_SECRET: ${{ secrets.SIGNING_SECRET }}
         run: python scripts/submit.py
