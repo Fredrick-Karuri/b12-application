@@ -1,0 +1,19 @@
+name: Submit Application to B12
+
+on:
+  workflow_dispatch:
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run submission script
+        env:
+          APPLICANT_NAME: "Your Name"
+          APPLICANT_EMAIL: "you@example.com"
+          RESUME_LINK: "https://linkedin.com/in/yourprofile"
+          SIGNING_SECRET: ${{ secrets.SIGNING_SECRET }}
+        run: python scripts/submit.py
